@@ -7,6 +7,8 @@ const dynamoDb = new AWS.DynamoDB.DocumentClient()
 
 const submit = async (event, context) => {
 
+  console.log('this is issue deployment')
+
   // If this query param is submitted, the function crashes...
   if (event && event['queryStringParameters'] && event['queryStringParameters']['error']) {
     crash()
